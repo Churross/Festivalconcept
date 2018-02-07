@@ -1,0 +1,34 @@
+\documentclass[10pt,a4paper,twoside]{article}
+
+\usepackage[bw,notranslation]{tunaChords}
+\usepackage{pdfpages}
+
+\newcommand{\insertpage}{\newpage\thispagestyle{empty}\mbox{}}
+\begin{document}
+% Voorblad
+\begin{center}
+\Huge{Festivalbundel}
+\end{center}
+\vspace*{\fill}
+\tableofcontents
+\vspace{1em}
+\hfill\small{Samengestelt: \today} 
+% Voeg hier meer liedjes aan toe plus aanpassen volgorde
+
+%\setcounter{pagenumber}{0}
+\input{songs/ingenieros}
+\insertpage
+\input{songs/julio}
+\input{songs/beso}
+\insertpage
+\input{songs/candidito}
+\input{songs/candombe}
+\addcontentsline{toc}{section}{6. Granada}
+\setcounter{songs}{6}
+\includepdf[pages=-]{Granada.pdf}
+%\input{songs/granada}
+\addcontentsline{toc}{section}{7. Los Vareadores}
+\setcounter{songs}{7}
+\includepdf[pages=-]{Vareadores.pdf}
+
+\end{document}
