@@ -1,15 +1,13 @@
 \documentclass[10pt,a4paper,twoside]{article}
 
-%\usepackage{tunaChords}
-%\usepackage[bw,notranslation]{tunaChords}
-\usepackage[notranslation]{tunaChords}
+\usepackage[bw,notranslation]{tunaChords}
 \usepackage{pdfpages}
 
-
+\newcommand{\insertpage}{\newpage\thispagestyle{empty}\mbox{}}
 \begin{document}
 % Voorblad
 \begin{center}
-\Huge{Nieuwe Nummers TCL}
+\Huge{Festivalbundel}
 \end{center}
 \vspace*{\fill}
 \tableofcontents
@@ -17,17 +15,20 @@
 \hfill\small{Samengestelt: \today} 
 % Voeg hier meer liedjes aan toe plus aanpassen volgorde
 
+%\setcounter{pagenumber}{0}
+\input{songs/ingenieros}
+\insertpage
+\input{songs/julio}
 \input{songs/beso}
-\input{songs/portuguesa}
-\input{songs/puntas}
+\insertpage
+\input{songs/candidito}
 \input{songs/candombe}
-% \input{songs/compostelana}
-% \input{songs/candidito}
-% \input{songs/cintas}
-% \input{songs/manolo}
-% \input{songs/y_viva_espana}
-% \input{songs/parate}
-% \input{songs/e-10}
-% \input{songs/nostalgias}
+%\addcontentsline{toc}{section}{6. Granada}
+%\setcounter{songs}{6}
+%\includepdf[pages=-]{Granada.pdf}
+\input{songs/granada}
+\addcontentsline{toc}{section}{7. Los Vareadores}
+\setcounter{songs}{7}
+\includepdf[pages=-]{Vareadores.pdf}
 
 \end{document}
